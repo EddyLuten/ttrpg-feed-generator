@@ -5,16 +5,29 @@ import {
 import { FirehoseSubscriptionBase, getOpsByType } from './util/subscription'
 
 const matchText: string[] = [
+  '#dnd',
+  '#ttrpg',
+  '#pathfinder',
+  '#call-of-cthulhu',
+  '#dungeonsanddragons',
+
+  'wotc',
+  'paizo',
+
   'dungeons and dragons',
   'dungeons & dragons',
   'pathfinder',
   'call of cthulhu',
   'warhammer',
+
   'shadowrun',
   'grayhawk',
   'forgotten realms',
   'eberron',
   'ravenloft',
+  'waterdeep',
+  'sword coast',
+
   'tabletop roleplaying',
   'tabletop rpg',
   'tabletop gaming',
@@ -23,12 +36,28 @@ const matchText: string[] = [
   'tabletop roleplaying game',
   'tabletop roleplaying games',
   'tabletop rpgs',
+
+  'critical role',
+  'dimension 20',
+  'exandria unlimited',
+  'the adventure zone',
+  'nerd poker',
+  'dungeons and daddies',
+  'dungeons & daddies',
+
+  'role20',
+  'foundry vtt',
+  'foundryvtt',
+  'dungeon master',
+  'game master',
+  'dungeonmaster',
+  'gamemaster',
 ]
 
 const matchPatterns: RegExp[] = [
-  /(^|\s)ttrpg($|\s)/im,
-  /(^|\s)d[&|n]d($|\s)/im,
-  /(^|\s)pf[12]e?($|\s)/im,
+  /(^|[\s\W])ttrpg($|[\W\s])/im,
+  /(^|[\s\W])d[&|n]d($|[\W\s])/im,
+  /(^|[\s\W])pf[12]e?($|[\W\s])/im,
 ]
 
 // Include high profile TTRPG users here to always include their posts
