@@ -12,7 +12,7 @@ const run = async () => {
 
   // YOUR bluesky password, or preferably an App Password (found in your client settings)
   // Ex: abcd-1234-efgh-5678
-  const password = ''
+  const password = process.env.BSKY_PASSWORD ?? ''
 
   // A short name for the record that will show in urls
   // Lowercase with no spaces.
@@ -26,7 +26,7 @@ const run = async () => {
   // (Optional) A description of your feed
   // Ex: Top trending content from the whole network
   const description =
-    "Posts about Dungeons, Dragons, Pathfinders, and more! Want to be removed or don't see yourself? Ping @luten.dev"
+    "A complete feed of Dungeons & Dragons, Pathfinder, Critical Role, and all other TTRPG posts! Want to be removed or added? Ping @luten.dev or open a Pull Request (yes, it's open source!)"
 
   // (Optional) The path to an image to be used as your feed's avatar
   // Ex: ~/path/to/avatar.jpeg

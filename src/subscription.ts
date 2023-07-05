@@ -5,29 +5,15 @@ import {
 import { FirehoseSubscriptionBase, getOpsByType } from './util/subscription'
 
 const matchText: string[] = [
+  // very common, match these first
   '#dnd',
   '#ttrpg',
   '#pathfinder',
   '#call-of-cthulhu',
+  '🎲',
   '#dungeonsanddragons',
 
-  'wotc',
-  'paizo',
-
-  'dungeons and dragons',
-  'dungeons & dragons',
-  'pathfinder',
-  'call of cthulhu',
-  'warhammer',
-
-  'shadowrun',
-  'grayhawk',
-  'forgotten realms',
-  'eberron',
-  'ravenloft',
-  'waterdeep',
-  'sword coast',
-
+  // broader terms, yet still common
   'tabletop roleplaying',
   'tabletop rpg',
   'tabletop gaming',
@@ -37,6 +23,47 @@ const matchText: string[] = [
   'tabletop roleplaying games',
   'tabletop rpgs',
 
+  // publishers
+  'wotc',
+  'wizard of the coast',
+  'paizo',
+
+  // systems
+  'dungeons and dragons',
+  'dungeons & dragons',
+  'pathfinder',
+  'call of cthulhu',
+  'warhammer',
+  'stars without number',
+  'worlds without number',
+  'symbaroum',
+  'mutant: year zero',
+  'urban shadows',
+  'vampire the masquerade',
+  'cy_borg',
+  'alien rpg',
+  'cyberpunk rpg',
+  'blade runner rpg',
+  'honey heist',
+  'mausritter',
+  'crash pandas',
+  'fate core',
+  'fate accelerated',
+  'fate rpg',
+  'fate system',
+  'fate srd',
+  'fate condensed',
+
+  // settings
+  'shadowrun',
+  'grayhawk',
+  'forgotten realms',
+  'eberron',
+  'ravenloft',
+  'waterdeep',
+  'sword coast',
+
+  // shows
   'critical role',
   'dimension 20',
   'exandria unlimited',
@@ -44,7 +71,16 @@ const matchText: string[] = [
   'nerd poker',
   'dungeons and daddies',
   'dungeons & daddies',
+  'glass cannon podcast',
 
+  // youtube channels
+  'matthew colville',
+  'mcdm',
+  'dawnforgedcast',
+  'bob world builder',
+  'dungeon dudes',
+
+  // tools and vtts
   'role20',
   'foundry vtt',
   'foundryvtt',
@@ -52,6 +88,9 @@ const matchText: string[] = [
   'game master',
   'dungeonmaster',
   'gamemaster',
+  'd&d beyond',
+  'dndbeyond',
+  'dnd beyond',
 ]
 
 const matchPatterns: RegExp[] = [
