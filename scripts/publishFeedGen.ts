@@ -43,7 +43,7 @@ const run = async () => {
     process.env.FEEDGEN_SERVICE_DID ?? `did:web:${process.env.FEEDGEN_HOSTNAME}`
 
   // only update this if in a test environment
-  const agent = new AtpAgent({ service: 'https://bsky.social' })
+  const agent = new AtpAgent({ service: 'https://bsky.network' })
   await agent.login({ identifier: handle, password })
 
   try {
